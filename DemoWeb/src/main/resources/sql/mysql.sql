@@ -6,8 +6,8 @@ USE demodb;
 
 CREATE TABLE usr (
     name                VARCHAR(20),
-    account				VARCHAR(20) NOT NULL,
-    password			VARCHAR(20),
-    permission			TINYINT,
+    account             VARCHAR(20) NOT NULL,
+    password            VARCHAR(20),
+    permission          TINYINT,
     PRIMARY KEY (account)
 );
