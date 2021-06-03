@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link href="" rel="stylesheet" />
+<title>Demo</title>
+</head>
+<body>
+	<h1>Demo</h1>
+	<a th:href="@{/demo/add}">新增</a>
+	<table border="1">
+		<tr>
+			<th>員編</th>
+			<th>姓名</th>
+			<th>編輯</th>
+			<th>刪除</th>
+		</tr>
+		<tr th:each="usr: ${usrList}">
+			<td th:text="${usr.account}" />
+			<td th:text="${usr.name}" />
+			<td><a th:href="@{/demo/{account}/edit(account=${usr.account})}">編輯</a></td>
+			<td><a th:href="@{/demo/{account}/delete.do(account=${usr.account})}">刪除</a></td>
+		</tr>
+	</table>
+	<a th:href="@{/}">Home</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link href="" rel="stylesheet" />
+<title>Edit - Demo</title>
+</head>
+<body>
+	<h1>Edit</h1>
+	<form action="#" th:action="@{/demo/{account}/edit.do(account=${usrForEdit.account})}" th:object="${usrForEdit}" method="post">
+		<p>姓名: <input type="text" th:field="*{name}" /></p>
+		<p>員編: <input type="text" th:field="*{account}" th:disabled="true" /></p>
+		<p>密碼: <input type="password" th:field="*{password}" /></p>
+		<p><input type="submit" value="送出" /></p>
+	</form>
+</body>
+</html>
